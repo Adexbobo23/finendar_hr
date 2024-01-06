@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+{% load static %}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>FINENDAR CREATOR</title>
+<link rel="icon" href="img/mini_logo.png" type="image/png">
+
+<link rel="stylesheet" href="{% static 'css/bootstrap1.min.css' %}" />
+
+<link rel="stylesheet" href="{% static 'vendors/themefy_icon/themify-icons.css' %}" />
+
+<link rel="stylesheet" href="{% static 'vendors/niceselect/css/nice-select.css' %}" />
+
+<link rel="stylesheet" href="{% static 'vendors/owl_carousel/css/owl.carousel.css' %}" />
+
+<link rel="stylesheet" href="{% static 'vendors/gijgo/gijgo.min.css' %}" />
+
+<link rel="stylesheet" href="{% static 'vendors/font_awesome/css/all.min.css' %}" />
+<link rel="stylesheet" href="{% static 'vendors/tagsinput/tagsinput.css' %}" />
+
+<link rel="stylesheet" href="{% static 'vendors/datepicker/date-picker.css' %}" />
+<link rel="stylesheet" href="{% static 'vendors/vectormap-home/vectormap-2.0.2.css' %}" />
+
+<link rel="stylesheet" href="{% static 'vendors/scroll/scrollable.css' %}" />
+
+<link rel="stylesheet" href="{% static 'vendors/datatable/css/jquery.dataTables.min.css' %}" />
+<link rel="stylesheet" href="{% static 'vendors/datatable/css/responsive.dataTables.min.css' %}" />
+<link rel="stylesheet" href="{% static 'vendors/datatable/css/buttons.dataTables.min.css' %}" />
+
+<link rel="stylesheet" href="{% static 'vendors/text_editor/summernote-bs4.css' %}" />
+
+<link rel="stylesheet" href="{% static 'vendors/morris/morris.css' %}">
+
+<link rel="stylesheet" href="{% static 'vendors/material_icon/material-icons.css' %}" />
+
+<link rel="stylesheet" href="{% static 'css/metisMenu.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/style1.css' %}" />
+<link rel="stylesheet" href="{% static 'css/colors/default.css' %}" id="colorSkinCSS">
+{% block head %}
+
+{% endblock %}
+</head>
+<body class="crm_body_bg">
+
+
+<nav class="sidebar">
+<div class="logo d-flex justify-content-between">
+<a class="large_logo" href="{% url 'company_dashbaord' %}" style="color: purple; font-size: 25px; font-weight: bold;">FINENDAR</a>
+<a class="small_logo" href="{% url 'company_dashbaord' %}" style="color: purple; font-size: 25px; font-weight: bold;">FINENDAR</a>
+<div class="sidebar_close_icon d-lg-none">
+<i class="ti-close"></i>
+</div>
+</div>
+<ul id="sidebar_menu">
+<li class>
+<a class="has" href="{% url 'company_dashbaord' %}" aria-expanded="false">
+<div class="nav_icon_small">
+<img src="{% static 'img/menu-icon/dashboard.svg' %}" alt>
+</div>
+<div class="nav_title">
+<span>Dashboard</span>
+</div>
+</a>
+</li>
+<li class>
+<a class="has-arrow" href="#" aria-expanded="false">
+<div class="nav_icon_small">
+<img src="{% static 'img/menu-icon/2.svg' %}" alt>
+</div>
+<div class="nav_title">
+<span>Application </span>
+</div>
+</a>
+<ul>
+<li><a href="#">editor</a></li>
+</ul>
+</li>
+<li class>
+<a class="has-arrow" href="#" aria-expanded="false">
+<div class="nav_icon_small">
+<img src="{% static 'img/menu-icon/4.svg' %}" alt>
+</div>
+<div class="nav_title">
+<span>Admins</span>
+</div>
+</a>
+<ul>
+<li><a href="admin_list.html">Admin List</a></li>
+<li><a href="add_new_admin.html">Add New Admin</a></li>
+</ul>
+</li>
+<li class>
+<a class="has-arrow" href="#" aria-expanded="false">
+<div class="nav_icon_small">
+<img src="{% static 'img/menu-icon/11.svg' %}" alt>
+</div>
+<div class="nav_title">
+<span>Role & Permissions</span>
+</div>
+</a>
+<ul>
+<li><a href="module_setting.html">Module Setting</a></li>
+<li><a href="role_permissions.html">Role & Permissions</a></li>
+</ul>
+</li>
+<li class>
+<a class="has-arrow" href="#" aria-expanded="false">
+<div class="nav_icon_small">
+<img src="{% static 'img/menu-icon/5.svg' %}" alt>
+</div>
+<div class="nav_title">
+<span>Users</span>
+</div>
+</a>
+<ul>
+<li><a href="user_list.html">Users List</a></li>
+<li><a href="add_new_user.html">Add New User</a></li>
+</ul>
+</li>
+<li class>
+<a href="calender.html" aria-expanded="false">
+<div class="nav_icon_small">
+<img src="{% static 'img/menu-icon/10.svg' %}" alt>
+</div>
+<div class="nav_title">
+<span>Calander</span>
+</div>
+</a>
+</li>
+<li class>
+<a class="has-arrow" href="#" aria-expanded="false">
+<div class="nav_icon_small">
+<img src="{% static 'img/menu-icon/11.svg' %}" alt>
+</div>
+<div class="nav_title">
+<span>Themes</span>
+</div>
+</a>
+<ul>
+<li><a href="dark_sidebar.html">Dark Sidebar</a></li>
+<li><a href="light_sidebar.html">light Sidebar</a></li>
+</ul>
+</li>
+<li class>
+<a class="has-arrow" href="#" aria-expanded="false">
+<div class="nav_icon_small">
+<img src="{% static 'img/menu-icon/12.svg' %}" alt>
+</div>
+<div class="nav_title">
+<span>General</span>
+</div>
+</a>
+<ul>
+<li><a href="Minimized_Aside.html">Minimized Aside</a></li>
+<li><a href="empty_page.html">Empty page</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+
+{% block content %}
+
+{% endblock %}
+
+<div id="back-top" style="display: none;">
+<a title="Go to Top" href="#">
+<i class="ti-angle-up"></i>
+</a>
+</div>
+
+<script src="{% static 'js/jquery1-3.4.1.min.js' %}"></script>
+
+<script src="{% static 'js/popper1.min.js' %}"></script>
+
+<script src="{% static 'js/bootstrap1.min.js' %}"></script>
+
+<script src="{% static 'js/metisMenu.js' %}"></script>
+
+<script src="{% static 'vendors/count_up/jquery.waypoints.min.js' %}"></script>
+
+<script src="{% static 'vendors/chartlist/Chart.min.js' %}"></script>
+
+<script src="{% static 'vendors/count_up/jquery.counterup.min.js' %}"></script>
+
+<script src="{% static 'vendors/niceselect/js/jquery.nice-select.min.js' %}"></script>
+
+<script src="{% static 'vendors/owl_carousel/js/owl.carousel.min.js' %}"></script>
+
+<script src="{% static 'vendors/datatable/js/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'vendors/datatable/js/dataTables.responsive.min.js' %}"></script>
+<script src="{% static 'vendors/datatable/js/dataTables.buttons.min.js' %}"></script>
+<script src="{% static 'vendors/datatable/js/buttons.flash.min.js' %}"></script>
+<script src="{% static 'vendors/datatable/js/jszip.min.js' %}"></script>
+<script src="{% static 'vendors/datatable/js/pdfmake.min.js' %}"></script>
+<script src="{% static 'vendors/datatable/js/vfs_fonts.js' %}"></script>
+<script src="{% static 'vendors/datatable/js/buttons.html5.min.js' %}"></script>
+<script src="{% static 'vendors/datatable/js/buttons.print.min.js' %}"></script>
+
+<script src="{% static 'vendors/datepicker/datepicker.js' %}"></script>
+<script src="{% static 'vendors/datepicker/datepicker.en.js' %}"></script>
+<script src="{% static 'vendors/datepicker/datepicker.custom.js' %}"></script>
+<script src="{% static 'js/chart.min.js' %}"></script>
+<script src="{% static 'vendors/chartjs/roundedBar.min.js' %}"></script>
+
+<script src="{% static 'vendors/progressbar/jquery.barfiller.js' %}"></script>
+
+<script src="{% static 'vendors/tagsinput/tagsinput.js' %}"></script>
+
+<script src="{% static 'vendors/text_editor/summernote-bs4.js' %}"></script>
+<script src="{% static 'vendors/am_chart/amcharts.js' %}"></script>
+
+<script src="{% static 'vendors/scroll/perfect-scrollbar.min.js' %}"></script>
+<script src="{% static 'vendors/scroll/scrollable-custom.js' %}"></script>
+
+<script src="{% static 'vendors/vectormap-home/vectormap-2.0.2.min.js' %}"></script>
+<script src="{% static 'vendors/vectormap-home/vectormap-world-mill-en.js' %}"></script>
+
+<script src="{% static 'vendors/apex_chart/apex-chart2.js' %}"></script>
+<script src="{% static 'vendors/apex_chart/apex_dashboard.js' %}"></script>
+
+<script src="{% static 'vendors/chart_am/core.js' %}"></script>
+<script src="{% static 'vendors/chart_am/charts.js' %}"></script>
+<script src="{% static 'vendors/chart_am/animated.js' %}"></script>
+<script src="{% static 'vendors/chart_am/kelly.js' %}"></script>
+<script src="{% static 'vendors/chart_am/chart-custom.js' %}"></script>
+
+<script src="{% static 'js/dashboard_init.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>
