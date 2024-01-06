@@ -69,7 +69,7 @@
   <li><a href="{% url 'faq' %}">FAQ</a></li>
   {% if user.is_authenticated %}
   <li><a href="{% url 'dashboard' %}">Candidate Dashboard</a></li>
-  <li><a href="job-post.html">Post A Jobs</a></li>
+  <li><a href="{% url 'job-post' %}">Post A Jobs</a></li>
   {% else %}
   <li><a href="{% url 'login' %}">Login</a></li>
   <li><a href="{% url 'register' %}">Register</a></li>

@@ -69,7 +69,7 @@
     <li><a href="{% url 'faq' %}">FAQ</a></li>
     {% if user.is_authenticated %}
     <li><a href="{% url 'dashboard' %}">Candidate Dashboard</a></li>
-    <li><a href="job-post.html">Post A Jobs</a></li>
+    <li><a href="{% url 'job-post' %}">Post A Jobs</a></li>
     {% else %}
     <li><a href="{% url 'login' %}">Login</a></li>
     <li><a href="{% url 'register' %}">Register</a></li>
@@ -546,17 +546,17 @@
 <div class="check-box-item">
 <h5 class="job-widget-title mb-10">Date of Post</h5>
 <ul class="tags">
-<li><a href="job-listing2.html">Technology,</a></li>
-<li><a href="job-listing2.html">Marketing,</a></li>
-<li><a href="job-listing2.html">Sales,</a></li>
-<li><a href="job-listing2.html">Transport,</a></li>
-<li><a href="job-listing2.html">Medical,</a></li>
-<li><a href="job-listing2.html">Design,</a></li>
-<li><a href="job-listing2.html">Data Analyst,</a></li>
-<li><a href="job-listing2.html">Development,</a></li>
-<li><a href="job-listing2.html">Non-Profit,</a></li>
-<li><a href="job-listing2.html">Manager,</a></li>
-<li><a href="job-listing2.html">Health,</a></li>
+<li><a href="">Technology,</a></li>
+<li><a href="">Marketing,</a></li>
+<li><a href="">Sales,</a></li>
+<li><a href="">Transport,</a></li>
+<li><a href="">Medical,</a></li>
+<li><a href="">Design,</a></li>
+<li><a href="">Data Analyst,</a></li>
+<li><a href="">Development,</a></li>
+<li><a href="">Non-Profit,</a></li>
+<li><a href="">Manager,</a></li>
+<li><a href="">Health,</a></li>
 </ul>
 </div>
 </div>
@@ -585,7 +585,7 @@
 </div>
 <div class="grid-area">
 <ul>
-<li><a class="active" href="job-listing2.html">
+<li><a class="active" href="{% url 'job-listing' %}">
 <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.26106 6.95674H0.695674C0.311464 6.95674 0 6.64527 0 6.26106V0.695674C0 0.311464 0.311464 0 0.695674 0H6.26106C6.64527 0 6.95674 0.311464 6.95674 0.695674V6.26106C6.95674 6.64527 6.64527 6.95674 6.26106 6.95674Z" />
 <path d="M15.304 6.95674H9.73864C9.35443 6.95674 9.04297 6.64527 9.04297 6.26106V0.695674C9.04297 0.311464 9.35443 0 9.73864 0H15.304C15.6882 0 15.9997 0.311464 15.9997 0.695674V6.26106C15.9997 6.64527 15.6882 6.95674 15.304 6.95674Z" />
@@ -593,7 +593,7 @@
 <path d="M15.304 16.0004H9.73864C9.35443 16.0004 9.04297 15.689 9.04297 15.3048V9.73937C9.04297 9.35517 9.35443 9.0437 9.73864 9.0437H15.304C15.6882 9.0437 15.9997 9.35517 15.9997 9.73937V15.3048C15.9997 15.689 15.6882 16.0004 15.304 16.0004Z" />
 </svg>
 </a></li>
-<li><a href="job-listing1.html">
+<li><a href="{% url 'joblist' %}">
 <svg width="22" height="16" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg">
 <path d="M1.91313 0C0.856731 0 0 0.893707 0 1.99656C0 3.09861 0.856731 3.99157 1.91313 3.99157C2.96953 3.99157 3.82626 3.09861 3.82626 1.99656C3.82626 0.893707 2.96953 0 1.91313 0Z" />
 <path d="M1.91313 6.00464C0.856731 6.00464 0 6.8976 0 8.00045C0 9.1025 0.856731 9.99621 1.91313 9.99621C2.96953 9.99621 3.82626 9.1025 3.82626 8.00045C3.82626 6.8976 2.96953 6.00464 1.91313 6.00464Z" />
@@ -609,294 +609,56 @@
 </div>
 </div>
 <div class="row g-4 mb-70">
-<div class="col-md-6">
-<div class="job-listing-card2">
-<div class="job-thumb">
-<img class="img-fluid" src="{% static 'assets/images/bg/job-list-1.png' %}" alt>
-<div class="bookmark">
-<i class="bi bi-bookmark"></i>
-</div>
-</div>
-<div class="job-content">
-<div class="company-area">
-<div class="logo">
-<img src="{% static 'assets/images/bg/company-logo/company-01.png' %}" alt>
-</div>
-<div class="company-details">
-<div class="name-location">
-<h5><a href="job-details.html">WordPress Developer</a></h5>
-<ul>
-<li><p><a href="company-details.html">Bistro Tech Ltd</a></p></li>
-<li><p><span class="title">Deadline:</span> 2 April, 2023</p></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="job-discription">
-<ul>
-<li>
-<p><span class="title">Salary:</span> $60-$90 / <span class="time">Per Hour</span></p>
-</li>
-<li>
-<p><span class="title">Experience:</span> 3-3.5 Years</p>
-</li>
-<li>
-<p><span class="title">Location:</span> Dhaka, Bangladesh</p>
-</li>
-</ul>
-</div>
-<div class="job-type-apply">
-<div class="job-type">
-<span class="light-green">Full Time</span>
-</div>
-<div class="apply-btn">
-<a href="job-details.html"><span><img src="{% static 'assets/images/icon/apply-ellipse.svg' %}" alt></span>Apply Now</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-md-6">
-<div class="job-listing-card2">
-<div class="job-thumb">
-<img class="img-fluid" src="{% static 'assets/images/bg/job-list-2.png' %}" alt>
-<div class="bookmark">
-<i class="bi bi-bookmark"></i>
-</div>
-</div>
-<div class="job-content">
-<div class="company-area">
-<div class="logo">
-<img src="{% static 'assets/images/bg/company-logo/company-02.png' %}" alt>
-</div>
-<div class="company-details">
-<div class="name-location">
-<h5><a href="job-details.html">Assistant Manager</a></h5>
-<ul>
-<li><p><a href="company-details.html">Hangman Gold</a></p></li>
-<li><p><span class="title">Deadline:</span> 3 April, 2023</p></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="job-discription">
-<ul>
-<li>
-<p><span class="title">Salary:</span> $20k-$50k / <span class="time">Per Hour</span></p>
-</li>
-<li>
-<p><span class="title">Experience:</span> 2-2.5 Years</p>
-</li>
-<li>
-<p><span class="title">Location:</span> Sylhet, Bangladesh</p>
-</li>
-</ul>
-</div>
-<div class="job-type-apply">
-<div class="job-type">
-<span class="light-green">Full Time</span>
-</div>
-<div class="apply-btn">
-<a href="job-details.html"><span><img src="{% static 'assets/images/icon/apply-ellipse.svg' %}" alt></span>Apply Now</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-md-6">
-<div class="job-listing-card2">
-<div class="job-thumb">
-<img class="img-fluid" src="{% static 'assets/images/bg/job-list-3.png' %}" alt>
-<div class="bookmark">
-<i class="bi bi-bookmark"></i>
-</div>
-</div>
-<div class="job-content">
-<div class="company-area">
-<div class="logo">
-<img src="{% static 'assets/images/bg/company-logo/company-03.png' %}" alt>
-</div>
-<div class="company-details">
-<div class="name-location">
-<h5><a href="job-details.html">UI/UX Designer</a></h5>
-<ul>
-<li><p><a href="company-details.html">Tech-Bath IT Ltd</a></p></li>
-<li><p><span class="title">Deadline:</span> 5 April, 2023</p></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="job-discription">
-<ul>
-<li>
-<p><span class="title">Salary:</span> $50K-$90K / <span class="time">Per Month</span></p>
-</li>
-<li>
-<p><span class="title">Experience:</span> 2-3 Years</p>
-</li>
-<li>
-<p><span class="title">Location:</span> Chicago, Australia</p>
-</li>
-</ul>
-</div>
-<div class="job-type-apply">
-<div class="job-type">
-<span class="light-blue">Part Time</span>
-</div>
-<div class="apply-btn">
-<a href="job-details.html"><span><img src="{% static 'assets/images/icon/apply-ellipse.svg' %}" alt></span>Apply Now</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-md-6">
-<div class="job-listing-card2">
-<div class="job-thumb">
-<img class="img-fluid" src="{% static 'assets/images/bg/job-list-4.png' %}" alt>
-<div class="urgent-batch">
-<span>Urgent</span>
-</div>
-<div class="bookmark">
-<i class="bi bi-bookmark"></i>
-</div>
-</div>
-<div class="job-content">
-<div class="company-area">
-<div class="logo">
-<img src="{% static 'assets/images/bg/company-logo/company-04.png' %}" alt>
-</div>
-<div class="company-details">
-<div class="name-location">
-<h5><a href="job-details.html">Junior Receptionist</a></h5>
-<ul>
-<li><p><a href="company-details.html">Gangster.Hide</a></p></li>
-<li><p><span class="title">Deadline:</span> 6 April, 2023</p></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="job-discription">
-<ul>
-<li>
-<p><span class="title">Salary:</span> $60-$80 / <span class="time">Per Hour</span></p>
-</li>
-<li>
-<p><span class="title">Experience:</span> 1-1.5 Years</p>
-</li>
-<li>
-<p><span class="title">Location:</span> Dhaka, Bangladesh</p>
-</li>
-</ul>
-</div>
-<div class="job-type-apply">
-<div class="job-type">
-<span class="light-blue">Part Time</span>
-</div>
-<div class="apply-btn">
-<a href="job-details.html"><span><img src="{% static 'assets/images/icon/apply-ellipse.svg' %}" alt></span>Apply Now</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-md-6">
-<div class="job-listing-card2">
-<div class="job-thumb">
-<img class="img-fluid" src="{% static 'assets/images/bg/job-list-5.png' %}" alt>
-<div class="bookmark">
-<i class="bi bi-bookmark"></i>
-</div>
-</div>
-<div class="job-content">
-<div class="company-area">
-<div class="logo">
-<img src="{% static 'assets/images/bg/company-logo/company-05.png' %}" alt>
-</div>
-<div class="company-details">
-<div class="name-location">
-<h5><a href="job-details.html">Senior Laboratoriest</a></h5>
-<ul>
-<li><p><a href="company-details.html">Laballo.Lab Ltd</a></p></li>
-<li><p><span class="title">Deadline:</span> 9 April, 2023</p></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="job-discription">
-<ul>
-<li>
-<p><span class="title">Salary:</span> $40K-$60K / <span class="time">Per Month</span></p>
-</li>
-<li>
-<p><span class="title">Experience:</span> 3-4 Years</p>
-</li>
-<li>
-<p><span class="title">Location:</span> New-York, USA</p>
-</li>
-</ul>
-</div>
-<div class="job-type-apply">
-<div class="job-type">
-<span class="light-green">Full Time</span>
-</div>
-<div class="apply-btn">
-<a href="job-details.html"><span><img src="{% static 'assets/images/icon/apply-ellipse.svg' %}" alt></span>Apply Now</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-md-6">
-<div class="job-listing-card2">
-<div class="job-thumb">
-<img class="img-fluid" src="{% static 'assets/images/bg/job-list-6.png' %}" alt>
-<div class="urgent-batch">
-<span>Urgent</span>
-</div>
-<div class="bookmark">
-<i class="bi bi-bookmark"></i>
-</div>
-</div>
-<div class="job-content">
-<div class="company-area">
-<div class="logo">
-<img src="{% static 'assets/images/bg/company-logo/company-06.png' %}" alt>
-</div>
-<div class="company-details">
-<div class="name-location">
-<h5><a href="job-details.html">Medical Nurse</a></h5>
-<ul>
-<li><p><a href="company-details.html">Marko Company</a></p></li>
-<li><p><span class="title">Deadline:</span> 9 April, 2023</p></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="job-discription">
-<ul>
-<li>
-<p><span class="title">Salary:</span> $60-$90 / <span class="time">Per Hour</span></p>
-</li>
-<li>
-<p><span class="title">Experience:</span> 3-3.5 Years</p>
-</li>
-<li>
-<p><span class="title">Location:</span> Dhaka, Bangladesh</p>
-</li>
-</ul>
-</div>
-<div class="job-type-apply">
-<div class="job-type">
-<span class="light-green">Part Time</span>
-</div>
-<div class="apply-btn">
-<a href="job-details.html"><span><img src="{% static 'assets/images/icon/apply-ellipse.svg' %}" alt></span>Apply Now</a>
-</div>
-</div>
-</div>
-</div>
-</div>
+    {% for job in jobs %}
+    <div class="col-md-6">
+        <div class="job-listing-card2">
+            <div class="job-thumb">
+                <img class="img-fluid" src="{{ job.job_image.url }}" alt="Job Image">
+                <div class="bookmark">
+                    <i class="bi bi-bookmark"></i>
+                </div>
+            </div>
+            <div class="job-content">
+                <div class="company-area">
+                    <div class="logo">
+                        <img src="{% static 'assets/images/bg/company-logo/company-01.png' %}" alt="Company Logo">
+                    </div>
+                    <div class="company-details">
+                        <div class="name-location">
+                            <h5><a href="#">{{ job.job_title }}</a></h5>
+                            <ul>
+                                <li><p><a href="#">{{ job.company_name }}</a></p></li>
+                                <li><p><span class="title">Deadline:</span> {{ job.deadline }}</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="job-discription">
+                    <ul>
+                        <li>
+                            <p><span class="title">Salary:</span> {{ job.salary_type }}</p>
+                        </li>
+                        <li>
+                            <p><span class="title">Experience:</span> {{ job.experience_level }}</p>
+                        </li>
+                        <li>
+                            <p><span class="title">Location:</span> {{ job.location }}</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="job-type-apply">
+                    <div class="job-type">
+                        <span class="light-green">{{ job.job_type }}</span>
+                    </div>
+                    <div class="apply-btn">
+                        <a href="#"><span><img src="{% static 'assets/images/icon/apply-ellipse.svg' %}" alt="Apply"></span>Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
 </div>
 <div class="row">
 <div class="col-lg-12 d-flex justify-content-center">
