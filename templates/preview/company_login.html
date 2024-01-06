@@ -240,53 +240,54 @@
 <span></span>
 </div>
 <form method="post" action="{% url 'company_login' %}">
-  {% csrf_token %}
+    {% csrf_token %}
+    
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-inner mb-25">
+                {{ form.username.label_tag }}
+                <div class="input-area">
+                    <img src="{% static 'assets/images/icon/email-2.svg' %}" alt>
+                    {{ form.username }}
+                </div>
+                {% if form.username.errors %}
+                    <p class="error">{{ form.username.errors.0 }}</p>
+                {% endif %}
+            </div>
+        </div>
   
-  <div class="row">
-      <div class="col-lg-12">
-          <div class="form-inner mb-25">
-              {{ form.username.label_tag }}
-              <div class="input-area">
-                  <img src="{% static 'assets/images/icon/email-2.svg' %}" alt>
-                  {{ form.username }}
-              </div>
-              {% if form.username.errors %}
-                  <p class="error">{{ form.username.errors.0 }}</p>
-              {% endif %}
-          </div>
-      </div>
-
-      <div class="col-lg-12">
-          <div class="form-inner">
-              {{ form.password.label_tag }}
-              <input type="password" name="password" id="password" placeholder="Password" />
-              <i class="bi bi-eye-slash" id="togglePassword"></i>
-              {% if form.password.errors %}
-                  <p class="error">{{ form.password.errors.0 }}</p>
-              {% endif %}
-          </div>
-      </div>
-
-      <div class="col-lg-12">
-          <div class="form-agreement form-inner d-flex justify-content-between flex-wrap">
-              <div class="form-group">
-                  {{ form.remember_me }}
-                  {{ form.remember_me.label_tag }}
-              </div>
-              <a href="#" class="forgot-pass">Forget Password?</a>
-          </div>
-      </div>
-
-      <div class="col-lg-12">
-          <div class="form-inner">
-              <button class="primry-btn-2" type="submit">LogIn</button>
-          </div>
-      </div>
-
-      <h6>Wanna log in as a Candidate? <a href="{% url 'login' %}">Go to Candidate Login</a></h6>
-      <h6>Don’t have an account? <a href="{% url 'register' %}">Sign Up</a></h6>
-  </div>
+        <div class="col-lg-12">
+            <div class="form-inner">
+                {{ form.password.label_tag }}
+                {{ form.password }}
+                <i class="bi bi-eye-slash" id="togglePassword"></i>
+                {% if form.password.errors %}
+                    <p class="error">{{ form.password.errors.0 }}</p>
+                {% endif %}
+            </div>
+        </div>
+  
+        <div class="col-lg-12">
+            <div class="form-agreement form-inner d-flex justify-content-between flex-wrap">
+                <div class="form-group">
+                    {{ form.remember_me }}
+                    {{ form.remember_me.label_tag }}
+                </div>
+                <a href="#" class="forgot-pass">Forget Password?</a>
+            </div>
+        </div>
+  
+        <div class="col-lg-12">
+            <div class="form-inner">
+                <button class="primry-btn-2" type="submit">LogIn</button>
+            </div>
+        </div>
+  
+        <h6>Wanna log in as a Candidate? <a href="{% url 'login' %}">Go to Candidate Login</a></h6>
+        <h6>Don’t have an account? <a href="{% url 'register' %}">Sign Up</a></h6>
+    </div>
 </form>
+
 </div>
 </div>
 </div>

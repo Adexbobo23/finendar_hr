@@ -33,3 +33,13 @@ class CompanyRegistrationForm(UserCreationForm):
     class Meta:
         model = Company
         fields = ['first_name', 'last_name', 'username', 'email', 'password1', 'password2', 'company_name', 'company_type', 'agreed_to_terms']
+
+
+
+from django.contrib.auth.forms import AuthenticationForm
+from .models import Company
+
+class CompanyAuthenticationForm(AuthenticationForm):
+    class Meta:
+        model = Company
+        fields = ['username', 'password']

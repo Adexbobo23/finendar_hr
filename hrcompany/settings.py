@@ -79,6 +79,12 @@ WSGI_APPLICATION = 'hrcompany.wsgi.application'
 AUTH_USER_MODEL = 'userauth.Participant'
 # AUTH_USER_MODEL = 'userauth.Company'
 
+# AUTHENTICATION_BACKENDS = [
+#     'userauth.backend.CustomBackend',
+#     'django.contrib.auth.backends.ModelBackend',
+# ]
+
+
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 

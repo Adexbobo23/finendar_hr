@@ -58,15 +58,15 @@
     <li class="menu-item-has-children">
     <a href="#" class="drop-down">Find Jobs</a><i class="bi bi-plus dropdown-icon"></i>
     <ul class="sub-menu">
-    <li><a href="category.html">Job Category</a></li>
-    <li><a href="job-listing2.html">Job Listing</a></li>
+    <li><a href="{% url 'job-category' %}">Job Category</a></li>
+    <li><a href="{% url 'job-listing' %}">Job Listing</a></li>
     </ul>
     </li>
     <li class="menu-item-has-children">
     <a href="#" class="drop-down">Pages</a><i class="bi bi-plus dropdown-icon"></i>
     <ul class="sub-menu">
-    <li><a href="pricing-plan.html">Pricing Plan</a></li>
-    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="{% url 'pricing-plan' %}">Pricing Plan</a></li>
+    <li><a href="{% url 'faq' %}">FAQ</a></li>
     {% if user.is_authenticated %}
     <li><a href="{% url 'dashboard' %}">Candidate Dashboard</a></li>
     <li><a href="job-post.html">Post A Jobs</a></li>
@@ -79,19 +79,19 @@
     <li class="menu-item-has-children">
     <a href="#">Company</a><i class="bi bi-plus dropdown-icon"></i>
     <ul class="sub-menu">
-    <li><a href="company-listing2.html">Company Listing</a></li>
-    <li><a href="company-dashboard.html">Company Dashboard</a></li>
+    <li><a href="{% url 'company-listing' %}">Company Listing</a></li>
+    <li><a href="{% url 'company_dashbaord' %}">Company Dashboard</a></li>
     </ul>
     </li>
     <li class="menu-item-has-children">
     <a href="#">Blog</a><i class="bi bi-plus dropdown-icon"></i>
     <ul class="sub-menu">
-    <li><a href="blog-grid.html">Blog Grid</a></li>
-    <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
+    <li><a href="{% url 'blog-grid' %}">Blog Grid</a></li>
+    <li><a href="{% url 'blog-side' %}">Blog List</a></li>
    
     </ul>
     </li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
     </ul>
     <div class="for-mobile-menu d-lg-none d-block">
     <div class="sign-in-btn mb-25">
