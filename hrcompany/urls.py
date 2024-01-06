@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('userauth.urls')),
     path('candidate/', include('participant.urls')),
     path('company/', include('company.urls')),
+    path('applications/', include('applications.urls')),
 ]
 
 if settings.DEBUG:
